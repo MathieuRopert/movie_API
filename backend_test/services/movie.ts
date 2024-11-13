@@ -3,8 +3,8 @@ import { ObjectId } from "mongodb";
 export default class Movie {
     constructor(
         public name: string, 
-        public director: number, 
+        public director: string, 
         public category: string, 
-        duration: string,
+        public duration: string,
         ) {}
 }

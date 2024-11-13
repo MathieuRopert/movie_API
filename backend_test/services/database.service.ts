@@ -11,7 +11,7 @@ export async function connectDB () {
    dotenv.config();
 
    if (!process.env.DB_CONN) {
-       throw new Error("DB_CONN_STRING is not defined");
+       throw new Error("DB connexion is not defined");
    }
    const client: mongoDB.MongoClient = new mongoDB.MongoClient(process.env.DB_CONN);
            
@@ -20,12 +20,12 @@ export async function connectDB () {
    const db: mongoDB.Db = client.db(process.env.DB_NAME);
   
    if (!process.env.MOVIE_COLLECTION) {
-       throw new Error("GAMES_COLLECTION_NAME is not defined");
+       throw new Error("Movie Collection is not defined");
    }
    const gamesCollection: mongoDB.Collection = db.collection(process.env.MOVIE_COLLECTION);
 
    if (!process.env.USER_COLLECTION) {
-    throw new Error("USER_COLLECTION_NAME is not defined");
+    throw new Error("User Collection is not defined");
     }
     const usersCollection: mongoDB.Collection = db.collection(process.env.USER_COLLECTION);
 
