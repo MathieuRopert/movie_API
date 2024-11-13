@@ -20,3 +20,5 @@ connectDB()
 app.listen(process.env.PORT, () =>
     console.log(`Server running!`)
 )
+
+export default connectDB;
