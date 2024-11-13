@@ -178,3 +178,4 @@ userRouter.delete("/:id", async (req: Request, res: Response) => {
         res.status(400).send((error as Error).message);
     }
 });
+export default userRouter;

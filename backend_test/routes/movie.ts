@@ -29,6 +29,7 @@ movieRouter.get("/", async (_req: Request, res: Response) => {
     }
 });
 
+
 //GET by ID
 movieRouter.get("/:id", async (req: Request, res: Response) => {
     const id = req?.params?.id;
@@ -129,3 +130,4 @@ movieRouter.delete("/:id", async (req: Request, res: Response) => {
         res.status(400).send((error as Error ).message);
     }
 });
+export default movieRouter;
