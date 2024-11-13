@@ -1,0 +1,23 @@
+{
+  "name": "technical-test-back-end",
+  "version": "1.0.0",
+  "description": "Welcome to the ADDE backend Technical Test. In this test, you will need to create a small backend application using the technologies that we at ADDE use in our daily routine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongodb": "^6.10.0"
+  }
+}
