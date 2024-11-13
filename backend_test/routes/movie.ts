@@ -18,8 +18,11 @@ movieRouter.get("/", async (_req: Request, res: Response) => {
            return;
        }
 
-       const movies = (await movieCollection.movies.find().toArray()) as unknown as Movie;
-
+       const movies = (await movieCollection.movies.find().toArray()) as unknown as Movie[];
+       if (movies.length === 0) {
+           res.status(404).send("Movie not found");
+           return;
+       }
        res.status(200).send(movies);
     } catch (error) {
         res.status(500).send((error as Error).message);
@@ -51,7 +54,7 @@ movieRouter.get("/:id", async (req: Request, res: Response) => {
 
 movieRouter.post("/", async (req: Request, res: Response) => {
     const { name, director, category, duration } = req.body;
-    console.log(req.body);
+    //console.log(req.body);
 
     if (!name || !director || !category || !duration) {
         res.status(400).send("All fields are required");

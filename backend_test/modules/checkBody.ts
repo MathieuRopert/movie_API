@@ -1,4 +1,4 @@
-function checkBody(body: { [key: string]: string }, keys: string[]) {
+export function checkBody(body: { [key: string]: string }, keys: string[]) {
     let isValid = true;
   
     for (const field of keys) {
